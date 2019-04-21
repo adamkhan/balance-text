@@ -167,7 +167,7 @@
      * @return {boolean}
      */
     function hasTextWrap() {
-        if (typeof document === 'undefined') return false; // To fix breaking error using vue-balance-text in Nuxt
+        if (typeof document === 'undefined') return false; // To fix breaking error when using vue-balance-text in Nuxt which does not recognize "document."
         var style = document.documentElement.style;
         return style.textWrap || style.WebkitTextWrap || style.MozTextWrap || style.MsTextWrap;
     }
